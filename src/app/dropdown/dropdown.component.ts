@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, Injectable} from '@angular/core';
 import items from 'src/app/fliles/services.json';
-import {MatDialog} from "@angular/material/dialog";
+import {MatDialog, MatDialogRef} from "@angular/material/dialog";
 import {ModalComponent} from "../modal/modal.component";
 
 @Component({
@@ -15,11 +15,15 @@ export class DropdownComponent {
 
   //modal initialisierung
  modalShow=false;
+
   constructor(public dialog: MatDialog) {
 
   }
  async openModal(){
-  const dialogRef=  this.dialog.open(ModalComponent);
+
+  const dialogRef=  this.dialog.open(ModalComponent,
+    {width:'350px'},
+    );
 console.log('modal opening')
     const confirm = await dialogRef.afterClosed().toPromise();
 if (confirm ==='ok'){

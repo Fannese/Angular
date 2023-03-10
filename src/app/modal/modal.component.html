@@ -1,9 +1,8 @@
-<p>modal works!</p>
-  <div class="modal-header">
-    <h5 class="modal-title">Modal title</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-  </div>
-  <div class="modal-body">
+<button mat-icon-button style="float: right; margin: 5px">
+  <mat-icon>close</mat-icon>
+</button>
+  <mat-dialog-content>
+    <header>Modal title</header>
     <p>We and our partners store and/or access information on a device, such as cookies
       and process personal data, such as unique identifiers and standard information sent by
       a device for personalised ads and content, ad and content measurement, and audience insights,
@@ -14,9 +13,10 @@
       Please note that some processing of your personal data may not require your consent, but you have
       a right to object to such processing. Your preferences will apply to this website only.
       You can change your preferences at any time by returning to this site or visit our privacy policy.</p>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closeModal()">Close</button>
-    <button type="button" class="btn btn-primary" (click)="confirmModal()">OK</button>
-  </div>
+
+    <mat-dialog-actions>
+    <button  mat-raised-button (click)="closeModal()">Close</button>
+    <button mat-raised-button color="primary" (click)="confirmModal()">OK</button>
+    </mat-dialog-actions>
+</mat-dialog-content>
 
