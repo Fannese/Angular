@@ -37,5 +37,5 @@ import {MatIconModule} from "@angular/material/icon";
   }
   ],
   bootstrap: [AppComponent]
-})
+, exports:[DropdownComponent]})//export the component you want to use in another module
 export class AppModule { }

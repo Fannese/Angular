@@ -1,7 +1,8 @@
-import {Component, Inject, inject, NgZone, Optional} from '@angular/core';
+import {Component, Inject, inject, Input, NgZone, Optional} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
 import {DropdownComponent} from "../dropdown/dropdown.component";
 import {MatDialogRef} from "@angular/material/dialog";
+import {AppComponent} from "../app.component";
 
 @Component({
   selector: 'app-modal',
@@ -22,7 +23,19 @@ closeModal():void{
     });
     console.log('closed....');
   }
-confirmModal(){
-    this.dialogRef.close('ok');
+confirmModal(event:any){
+ const message=new AppComponent();
+  this.dialogRef.close({event: 'ok'});
+ //const confirmevent= new Event('confirm',{bubbles:true, composed:true});
+  //event.target.addEventListener(confirmevent);
+
+  message.dropdownDetails.bind(this);
+
+    console.log(message.dropdownDetails())
+
+//this.dropdownDetails.bind(this);
+
 }
+
+
 }

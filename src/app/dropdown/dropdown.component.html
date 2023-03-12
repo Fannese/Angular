@@ -1,4 +1,4 @@
-<p>dropdown works!</p>
+
 <h1>item List</h1>
 <<!--div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
@@ -11,7 +11,7 @@
 
 <mat-form-field>
   <mat-label>Select Item</mat-label>
-  <mat-select [(ngModel)]="selectedItem">
+  <mat-select [(ngModel)]="selectedItem" id="select">
     <mat-option *ngFor="let item of itemsList" [value]="item" (click)="openModal()">
       {{item.name}}
     </mat-option>
@@ -26,10 +26,10 @@
     <li><a class="dropdown-item" (click)="modalDetails=true" href="">{{item.name}}</a></li>
   </ul>
 </div>-->
-<div class="details">
-  <h2></h2>
+
+
   <p></p>
 <!--  <app-modal></app-modal>-->
 
-</div>
+
 <!--<button (click)="modalDetails=true">showModal</button>-->
