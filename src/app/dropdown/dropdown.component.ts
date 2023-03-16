@@ -1,9 +1,8 @@
-import {Component, Injectable, Output} from '@angular/core';
+import {Component, EventEmitter, Injectable, Output} from '@angular/core';
 import items from 'src/app/fliles/services.json';
 import {MatDialog, MatDialogRef} from "@angular/material/dialog";
 import {ModalComponent} from "../modal/modal.component";
 import {Input} from "@angular/core";
-
 @Component({
   selector: 'app-dropdown',
   templateUrl: './dropdown.component.html',
@@ -11,8 +10,12 @@ import {Input} from "@angular/core";
 })
 export class DropdownComponent {
   title='Dropdown-menü';
-  @Input() selectedItem:any;
-  itemsList:{id: number,name:string,title:string,description:string, image:string,url:string}[]=items;
+public selectedItem:any//Movies;
+
+ itemsList:{id: number,name:string,title:string,description:string, image:string,url:string}[]=items;
+
+ /* @Output("movieSelected")
+  movieSelectedEvent = new EventEmitter<Movies>();*/
 
   //modal initialisierung
  //modalShow=false;
@@ -23,23 +26,15 @@ export class DropdownComponent {
  async openModal(){
 
   const dialogRef= this.dialog?.open(ModalComponent,
-    {width:'350px'});
+    {width:'500px'});
     const confirm = await dialogRef?.afterClosed().toPromise();
-
-    if (confirm ==='ok'){
-    //await this.dropdownDetails();
-}
-    /*dialogRef.afterClosed().subscribe(result=>{
-      console.log(`${result}`);
-    })*/
-
-
+   if (confirm ==='ok'){
+     //await this.dropdownDetails();
+   }
   }
- /*async dropdownDetails(){
-const select:any=document.querySelectorAll('app-root');
-   const img:HTMLImageElement= document.createElement('img');
-   //img.src=this.selectedItem.image;
-   select.appendChild(img);
-  }*/
 
+ /* movieSelected() {
+    this.movieSelectedEvent.emit(this.selectedItem);
+    console.log('movieSelected', this.movieSelectedEvent.emit(this.selectedItem))
+  }*/
 }

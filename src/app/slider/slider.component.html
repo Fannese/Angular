@@ -1,0 +1,14 @@
+<div class="slider-template">
+  <!--<ng-image-slider [images]="imageObj" #nav></ng-image-slider>-->
+  <div class="slide-wrap" *ngFor="let img of imageObj">
+      <div class="slide-main">
+        <div class="item">
+          <img class="slider" [src]="img.image">
+        </div>
+      </div>
+    </div>
+    <div class="button-area">
+      <button class="prev" (click)="prevButton()">&#10094;</button>
+      <button class="next" (click)="nextButton()" style="position: absolute">&#10095;</button>
+    </div>
+  </div>

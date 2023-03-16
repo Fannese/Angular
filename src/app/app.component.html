@@ -31,11 +31,13 @@
       oder sie im Laden zu kaufen. Ich will nicht sagen, dass ich diese Zeit bereut habe, aber ich bin sicher dankbar,
       dass ich jetzt mehr Auswahl habe, weil ich Filminformationen bequem von meiner Couch aus lesen kann.</p>
   </section>
-<div id="details" [(ngModel)]="msgFromParent1">
   <div></div>
+<div class="details">
+
 </div>
-  <h3>Dropdown-item</h3>
-  <app-dropdown style="margin: 50px"></app-dropdown>
+  <app-slider></app-slider>
+  <app-dropdown style="margin: 50px"></app-dropdown><!--(movieSelected)="showMovieDetails($event)-->
+
 </div>
 
 <footer>

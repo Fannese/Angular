@@ -1,9 +1,10 @@
-<button mat-icon-button style="float: right; margin: 5px">
+<!--<button mat-icon-button style="float: right; margin: 5px; background-color: orange" (click)="closeModal()">
   <mat-icon>close</mat-icon>
-</button>
-  <mat-dialog-content>
-    <header>Modal title</header>
-    <p>We and our partners store and/or access information on a device, such as cookies
+</button> -->
+<mat-dialog-content style="display: inline-table; background-color: orange">
+    <header style="
+        border-bottom: 2px solid #ccc;text-align: center;padding: 1rem;"><h1>Bitte bestätigen um Details anzusehen!</h1></header>
+    <p style="padding: 1rem">We and our partners store and/or access information on a device, such as cookies
       and process personal data, such as unique identifiers and standard information sent by
       a device for personalised ads and content, ad and content measurement, and audience insights,
       as well as to develop and improve products. With your permission we and our partners may use
@@ -12,7 +13,8 @@
       to consent or access more detailed information and change your preferences before consenting.
       Please note that some processing of your personal data may not require your consent, but you have
       a right to object to such processing. Your preferences will apply to this website only.
-      You can change your preferences at any time by returning to this site or visit our privacy policy.</p>
+      You can change your preferences at any time by returning to this site or visit our privacy policy.
+    </p>
 
     <mat-dialog-actions>
     <button  mat-raised-button (click)="closeModal()">Close</button>

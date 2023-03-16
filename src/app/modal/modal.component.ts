@@ -4,6 +4,7 @@ import {DropdownComponent} from "../dropdown/dropdown.component";
 import {MatDialogRef} from "@angular/material/dialog";
 import {AppComponent} from "../app.component";
 
+
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
@@ -11,6 +12,7 @@ import {AppComponent} from "../app.component";
 })
 export class ModalComponent {
 
+  //saveElement = new DropdownComponent();
   constructor(public dialogRef: MatDialogRef<ModalComponent>,private ngZone: NgZone){
 
   }
@@ -23,19 +25,13 @@ closeModal():void{
     });
     console.log('closed....');
   }
-confirmModal(event:any){
+
+  confirmModal(event:any){
  const message=new AppComponent();
   this.dialogRef.close({event: 'ok'});
- //const confirmevent= new Event('confirm',{bubbles:true, composed:true});
-  //event.target.addEventListener(confirmevent);
-
   message.dropdownDetails.bind(this);
-
-    console.log(message.dropdownDetails())
-
-//this.dropdownDetails.bind(this);
+console.log('okkkkk')
 
 }
-
 
 }
