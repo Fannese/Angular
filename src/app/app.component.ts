@@ -15,15 +15,21 @@ export class AppComponent {
  // msgFromParent1:any;
   @Output() msgFromParent1:any=this.detail.selectedItem
   async dropdownDetails(){
-    const save=this.detail.selectedItem
+    //const save=this.detail.selectedItem
     this.detail.itemsList.forEach((element)=>{
-      const select:any=document.querySelector('.details');
-      const img:HTMLImageElement= document.createElement('img');
-      //const titre:string=document.createElement('h1')
+      const div=document.querySelector('.details') as HTMLDivElement;
+      const img= document.createElement('img');
+      const title=document.createElement('h1');
+      const description=document.createElement('h3');
       img.setAttribute('class','detailsImage');
+      img.setAttribute('alt', element.alt);
+      title.innerText =element.title;
+      description.innerText=element.description;
 
         img.src=element.image;
-        select.appendChild(img)
+      div.appendChild(title);
+      div.appendChild(description);
+        div.appendChild(img);
 
 
       console.log('confirm info')

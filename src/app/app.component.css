@@ -44,8 +44,13 @@ img {
   flex-direction: column;
 
 }
-
-.detailsImage img{
+div .details{
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: 5rem;
+}
+img .detailsImage{
   width: 480px;
   height: 500px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);

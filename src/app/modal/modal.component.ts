@@ -30,7 +30,7 @@ closeModal():void{
  const message=new AppComponent();
   this.dialogRef.close({event: 'ok'});
   message.dropdownDetails.bind(this);
-console.log('okkkkk')
+console.log('okkkkk',message.dropdownDetails())
 
 }
 

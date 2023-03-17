@@ -1,8 +1,5 @@
 [{
-  "image": "https://i.pinimg.com/originals/57/7e/c5/577ec5279a42b30e3101d698ec51364c.jpg",
-  "alt":"image1"},
-  {"image": "https://3.bp.blogspot.com/-TOB0p76BOw0/WhT4Pl1O52I/AAAAAAAACYg/AmCgAQ01VSU0mD3GqV0meuISBvV9j-NSQCLcBGAs/s1600/DCS09JLtag.jpg",
-    "alt":"image2"},
-  {"image":"https://i.pinimg.com/originals/27/7f/7d/277f7de296757492750bd3a435040966.jpg",
-    "alt":"image3"}
+  "image": "https://i.pinimg.com/originals/57/7e/c5/577ec5279a42b30e3101d698ec51364c.jpg"},
+  {"image": "https://3.bp.blogspot.com/-TOB0p76BOw0/WhT4Pl1O52I/AAAAAAAACYg/AmCgAQ01VSU0mD3GqV0meuISBvV9j-NSQCLcBGAs/s1600/DCS09JLtag.jpg"},
+  {"image":"https://i.pinimg.com/originals/27/7f/7d/277f7de296757492750bd3a435040966.jpg"}
 ]

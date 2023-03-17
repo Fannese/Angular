@@ -10,9 +10,9 @@ import {Input} from "@angular/core";
 })
 export class DropdownComponent {
   title='Dropdown-menü';
-public selectedItem:any//Movies;
+@Input() selectedItem:any//Movies;
 
- itemsList:{id: number,name:string,title:string,description:string, image:string,url:string}[]=items;
+ itemsList:{id: number,name:string,title:string,description:string, image:string,alt:string}[]=items;
 
  /* @Output("movieSelected")
   movieSelectedEvent = new EventEmitter<Movies>();*/
