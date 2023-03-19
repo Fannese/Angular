@@ -2,7 +2,6 @@ header{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: -0.5rem;
   padding: 2.5rem;
   background-color: purple;
   color: #fff;
@@ -35,14 +34,16 @@ img {
   text-decoration: none;
   color: #fff;
 }
-.card-body{
+body{
 
-  justify-content: space-between;
   background-color: powderblue;
-  margin: -1rem;
+  height: auto;
   display: flex;
   flex-direction: column;
-
+}
+.card-body{
+  display: flex;
+  flex-direction: column;
 }
 div .details{
   display: flex;
@@ -76,15 +77,17 @@ img .detailsImage{
 footer{
   background-color: orange;
   text-align: center;
-  margin: -0.5rem;
   padding: 2rem;
 }
-@media screen and(max-width: 600px) {
+@media all and(max-width: 600px) {
 
   header{
     flex-direction: column;
 
   }
+img{
+  width: 400px;
+}
   .logo a{
     font-size: 1.5rem;
   }

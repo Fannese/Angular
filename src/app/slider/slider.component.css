@@ -60,3 +60,19 @@ img .slideImage{
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
+@media all and (max-width:600px){
+
+    img{
+      width: 400px;
+    }
+  .next{
+    margin-right: -1rem;
+    translate: 50% -10rem;
+    position: absolute;
+  }
+  .prev{
+    margin-right: -1rem;
+    translate: 50% -10rem;
+    position: absolute;
+  }
+}

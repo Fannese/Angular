@@ -37,14 +37,10 @@ totalImages=this.objectLength(this.imageObj);
     const div=document.querySelector('.item') as HTMLDivElement;
     const image=document.createElement('img') as any;
     image.setAttribute('class','slideImage')
-    image.style="width:500px; height: 350px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);";
+    image.style="width:auto; height: 350px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);";
     const currentPicture=document.querySelector('.item')as HTMLDivElement;
-
-
-        image.src=this.imageObj[this.current];
-
-
-      currentPicture.innerText=this.current+1;
+    image.src=this.imageObj[this.current];
+    currentPicture.innerText=this.current+1;
       div.appendChild(image);
 
 

@@ -75,3 +75,8 @@
   display: flex;
   position: absolute;
 }
+@media all and (max-width: 600px){
+  p{
+    margin: 1rem;
+  }
+}
