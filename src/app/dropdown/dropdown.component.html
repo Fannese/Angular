@@ -1,35 +1,27 @@
-
-
-<!--div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
-    Film Liste
-  </button>
-  <ul class="dropdown-menu" *ngFor="let item of itemsList">
-    <li><a class="dropdown-item" href="#">{{item.name}}</a></li>
-  </ul>
-</div>-->
 <p>
-  öffnen Sie das Dropdown-Menü und wählen Sie ihren
-  passenden Filmplakat aus, viel Spaß!
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+  At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+  no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
 </p>
 <mat-form-field>
   <mat-label>Filmplakat auswählen</mat-label>
   <mat-select [(ngModel)]="selectedItem" id="select"><!--(valueChange)="movieSelected()-->
-    <mat-option *ngFor="let item of itemsList" value="{{item.id}},{{item.description}},{{item.image}}" (click)="openModal()">
+    <mat-option *ngFor="let item of itemsList" value="{{item.id}}" (click)="openModal()">
       {{item.name}}
-
-    <!--  <ng-container *ngIf="!selectedItem ; else elseBlock">
-<h1>ja</h1>
-      </ng-container>
-      <ng-template #elseBlock>
-        <h3>{{item.description}}</h3>
-        <img [src]="item.image">
-      </ng-template>-->
     </mat-option>
-
   </mat-select>
 </mat-form-field>
-<p>{{selectedItem}}</p>
+<!--<p>{{selectedItem}}</p>-->
+<div *ngIf="selectedItem" class="showDetails">
+  <h1>{{itemsList[selectedItem].title}}</h1>
+  <p>{{itemsList[selectedItem].description}}</p>
+ <img src={{itemsList[selectedItem].image}}>
+</div>
+
+
+
+
 
 <br>
 <!--<div class="dropdown">

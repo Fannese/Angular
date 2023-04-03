@@ -27,7 +27,7 @@ closeModal():void{
   }
 
   confirmModal(event:any){
- const message=new AppComponent();
+  const message=new DropdownComponent();
   this.dialogRef.close({event: 'ok'});
   message.dropdownDetails.bind(this);
 console.log('okkkkk',message.dropdownDetails())

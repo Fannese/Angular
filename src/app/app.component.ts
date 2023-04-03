@@ -14,7 +14,7 @@ export class AppComponent {
   //@ViewChild(DropdownComponent) msgFromParent1:DropdownComponent;
  // msgFromParent1:any;
   @Output() msgFromParent1:any=this.detail.selectedItem
-  async dropdownDetails(){
+ /* async dropdownDetails(){
     //const save=this.detail.selectedItem
     this.detail.itemsList.forEach((element)=>{
       const div=document.querySelector('.details') as HTMLDivElement;
@@ -35,7 +35,7 @@ export class AppComponent {
       console.log('confirm info')
     })
 
-  }
+  }*/
 
   /*showMovieDetails(movie:Movies) {
     this.detail.itemsList.forEach((element)=>{
