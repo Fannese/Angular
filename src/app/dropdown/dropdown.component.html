@@ -6,36 +6,15 @@
 </p>
 <mat-form-field>
   <mat-label>Filmplakat auswählen</mat-label>
-  <mat-select [(ngModel)]="selectedItem" id="select"><!--(valueChange)="movieSelected()-->
-    <mat-option *ngFor="let item of itemsList" value="{{item.id}}" (click)="openModal()">
+  <mat-select [(ngModel)]="selectedItem" id="select">
+    <mat-option *ngFor="let item of itemsList" value="{{item.id}}">
       {{item.name}}
     </mat-option>
   </mat-select>
 </mat-form-field>
-<!--<p>{{selectedItem}}</p>-->
 <div *ngIf="selectedItem" class="showDetails">
   <h1>{{itemsList[selectedItem].title}}</h1>
   <p>{{itemsList[selectedItem].description}}</p>
  <img src={{itemsList[selectedItem].image}}>
 </div>
 
-
-
-
-
-<br>
-<!--<div class="dropdown">
-  <button class="dropdown-toggle" [(ngModel)]="selectedItem"  (selectionchange)="modalDetails=true" >
-
-  </button>
-  <ul class="dropdown-menü" *ngFor="let item of itemsList">
-    <li><a class="dropdown-item" (click)="modalDetails=true" href="">{{item.name}}</a></li>
-  </ul>
-</div>-->
-
-
-  <p></p>
-<!--  <app-modal></app-modal>-->
-
-
-<!--<button (click)="modalDetails=true">showModal</button>-->

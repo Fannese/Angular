@@ -12,22 +12,22 @@ flex-direction: column;
   border-radius: 10px;
 
 }
-.slide-main{
-  width: 500%;
+/*.slide-main{
+  max-width: 500%;
   height: 500px;
   display: flex;
-}
-.item{
+}*/
+/*.item{
   margin-left: 4.5rem;
   width: 20%;
 
-}
-img .slideImage{
+}*/
+/*img.slideImage{
   width: 600px;
   height: 350px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 
-}
+}*/
 /*.slider{
   position: absolute;
   top: 50%;
@@ -56,23 +56,22 @@ img .slideImage{
   left: 0;
   border-radius: 3px 0 0 3px;
 }
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
-@media all and (max-width:600px){
-
+@media screen and (max-width:600px){
     img{
-      width: 400px;
+      width: 350px;
     }
+
   .next{
-    margin-right: -1rem;
-    translate: 50% -10rem;
     position: absolute;
+    top: 160%;
+    margin-right: 5rem
   }
   .prev{
-    margin-right: -1rem;
-    translate: 50% -10rem;
+    margin-left: 0rem;
     position: absolute;
+    top: 160%;
   }
 }

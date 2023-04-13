@@ -2,7 +2,7 @@ header{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 2.5rem;
+height: 6rem;
   background-color: purple;
   color: #fff;
   position: sticky;
@@ -76,13 +76,21 @@ img .detailsImage{
 
 footer{
   background-color: orange;
-  text-align: center;
-  padding: 2rem;
+  align-items: center;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
 }
-@media all and(max-width: 600px) {
-
+@media screen and(max-width: 600px) {
   header{
     flex-direction: column;
+
+  }
+  .card-text{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1px;
 
   }
 img{
